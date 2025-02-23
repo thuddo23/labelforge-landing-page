@@ -15,7 +15,7 @@ def rename_files_and_collect_changes(root_directory):
         for filename in files:
             if "Anolytics" in filename:
                 old_filepath = os.path.join(root, filename)
-                new_filename = filename.replace("Anolytics", "labelforge")
+                new_filename = filename.replace("Anolytics", "LabelForge")
                 new_filepath = os.path.join(root, new_filename)
                 try:
                     os.rename(old_filepath, new_filepath)

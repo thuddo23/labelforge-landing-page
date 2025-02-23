@@ -339,7 +339,7 @@
 │       ├── 1696401004_machine-learning-banner-2.jpg
 │       ├── 1696583879_facial.jpg
 │       ├── 1696584330_Cover-Page-Semantic-Segmentation-min.jpg
-│       ├── 1696584720_Cover-Page-Image-Anolytics-Blog.jpg
+│       ├── 1696584720_Cover-Page-Image-LabelForge-Blog.jpg
 │       ├── 1696584999_0100-ai-vs-rpa-intern.jpg
 │       ├── 1696585272_Cover-Page-Image-AI-in-Retail.jpg
 │       ├── 1696585683_Featured-Image-Autonomous-Vehicle.jpg
@@ -443,8 +443,8 @@
 │       ├── 1734597283_role-of-data-annotation.jpg
 │       ├── 1736852316_the-impact-of-data-annotation-on-deep-learning-in-computer-vision.jpg
 │       ├── 1739788034_generative-ai-training-datasets.png
-│       ├── Anolytics-POSH-Policy.pdf
-│       └── Anolytics-Whistleblower-Policy-and-Procedure.pdf
+│       ├── LabelForge-POSH-Policy.pdf
+│       └── LabelForge-Whistleblower-Policy-and-Procedure.pdf
 ├── request-a-quote
 │   └── index.html
 ├── robots.txt
@@ -478,7 +478,7 @@
 │   ├── 1696401004_machine-learning-banner-2.jpg
 │   ├── 1696583879_facial.jpg
 │   ├── 1696584330_Cover-Page-Semantic-Segmentation-min.jpg
-│   ├── 1696584720_Cover-Page-Image-Anolytics-Blog.jpg
+│   ├── 1696584720_Cover-Page-Image-LabelForge-Blog.jpg
 │   ├── 1696584999_0100-ai-vs-rpa-intern.jpg
 │   ├── 1696585272_Cover-Page-Image-AI-in-Retail.jpg
 │   ├── 1696585683_Featured-Image-Autonomous-Vehicle.jpg
