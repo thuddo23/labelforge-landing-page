@@ -290,7 +290,7 @@
 │   │   └── styles.css
 │   ├── featured_images
 │   │   ├── agricalture.webp
-│   │   ├── anolytics.jpg
+│   │   ├── labelforge.jpg
 │   │   ├── blog-back.jpg
 │   │   ├── cal.png
 │   │   ├── Caltech.webp
@@ -543,7 +543,7 @@
 │   ├── 1698211008_posh.jpg
 │   ├── 1698211013_whistleblower-policy.jpg
 │   ├── 1698230973_contact-us.jpg
-│   ├── 1702026239_anolytics-white.png
+│   ├── 1702026239_labelforge-white.png
 │   ├── 1702556136_agriculture.webp
 │   ├── 1702556147_autonomous-flying.webp
 │   ├── 1702556153_healthcare.webp
@@ -792,7 +792,7 @@
 │   ├── 1734597283_role-of-data-annotation.jpg
 │   ├── 1736852316_the-impact-of-data-annotation-on-deep-learning-in-computer-vision.jpg
 │   ├── 1739788034_generative-ai-training-datasets.png
-│   ├── anolytics-logo-circle.png
+│   ├── labelforge-logo-circle.png
 │   ├── cost-effective-pricing.webp
 │   ├── fully-scalable-service.webp
 │   ├── quality-with-accuracy.webp
