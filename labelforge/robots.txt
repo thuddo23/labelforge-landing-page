@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Disallow: /public/message.php
+Crawl-delay: 10

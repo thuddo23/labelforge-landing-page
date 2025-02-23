@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta charSet="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" href="../../public/featured_images/favicon.ico" />
+<link rel="manifest" href="../../public/featured_images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!-- *********Start of SEO********* -->
+<title>Understanding Quality in Generative AI Training Datasets</title>
+<meta name="description" content="Generative AI training, such as large language models (LLMs), requires extensive data to learn patterns, make predictions, and generate meaningful outputs." />
+<meta name="keywords" content="Generative AI Training Datasets, generative ai">
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Understanding Quality in Generative AI Training Datasets" />
+<meta property="og:description" content="Generative AI training, such as large language models (LLMs), requires extensive data to learn patterns, make predictions, and generate meaningful outputs." />
+<meta property="og:url" content="https://www.labelforge.tech/blog/understanding-quality-in-generative-ai-training-datasets/" />
+<meta property="og:site_name" content="Anolytics" />
+<meta property="article:publisher" content="https://www.facebook.com/anolytics" />
+<meta property="article:published_time" content="2023-09-12T12:06:55+00:00" />
+<meta property="article:modified_time" content="2023-09-13T12:08:50+00:00" />
+<meta property="og:image" content="https://www.labelforge.tech/public/upload/1739788034_generative-ai-training-datasets.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="585" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta name="author" content="Anolytics" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Understanding Quality in Generative AI Training Datasets" />
+<meta name="twitter:description" content="Generative AI training, such as large language models (LLMs), requires extensive data to learn patterns, make predictions, and generate meaningful outputs." />
+<meta name="twitter:image" content="https://www.labelforge.tech/public/upload/1739788034_generative-ai-training-datasets.png" />
+<meta name="twitter:creator" content="@anolytics" />
+<meta name="twitter:site" content="@anolytics" />
+<link rel="alternate" hreflang="en-US" href="index.html">
+<!-- *********End of SEO********* -->
+<meta name="msvalidate.01" content="A1AAF10BD385F481D3A72BBF4BFDBB7A" />
+<meta name="google-site-verification" content="2z9wqCplb02RZgeyv_kmwGSzvHEalIvynPG-lJUHk6Y" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5N8XCPX6BS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5N8XCPX6BS');
+</script>
+<link rel="stylesheet" href="../../public/css/styles.css"/>
+<style>table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+  vertical-align: baseline;
+}
+p strong {font-weight: 600;}
+.blog-single .descp p b {
+  color: #171717;
+  font-family: HelveticaNeue,sans-serif;
+
+}</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K28JRBG');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+    <body class="blog-single">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K28JRBG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	  <div id="__next">
+      <div style="padding-top:0">
+
+        <header class="header-sticky header-dark" id="navigation" style="background: #000;">
+<div class="container px-0">
+<nav class="navbar navbar-expand-lg navbar-dark">
+<a class="navbar-brand" href="../../index.html"><img class="logoimg navbar-logo navbar-logo-light" src="../../upload/1702026239_anolytics-white.png" alt="anolytics logo"></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div id='mobile-button'></div></button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solutions</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="../../generative-ai/index.html"><span>Generative AI</span></a>	
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../computer-vision/index.html"><span>Computer Vision</span></a>	
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../data-processing/index.html"><span>Data Processing</span></a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../content-moderation-services/index.html"><span>Content Moderation</span></a>		
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../natural-language-processing/index.html"><span>Natural Language Processing</span></a>
+<div class="dropdown-divider"></div>
+</div>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+<div class="dropdown-menu third" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="../../data-classification/index.html"><span>Data Classification</span></a>	
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../image-annotation-services/index.html"><span>Image Annotation Services</span></a>	
+<div class="dropdown-divider"></div>				   
+<a class="dropdown-item" href="../../video-annotation-services/index.html"><span>Video Annotation Services</span></a>	
+<div class="dropdown-divider"></div>				   
+<a class="dropdown-item" href="../../text-annotation-services/index.html"><span>Text Annotation Services</span></a>	
+<div class="dropdown-divider"></div>	
+<a class="dropdown-item" href="../../audio-annotation-services/index.html"><span>Audio Annotation Services</span></a>	
+<div class="dropdown-divider"></div>		  
+<a class="dropdown-item" href="../../medical-data-annotation/index.html"><span>Medical Data Annotation</span></a> 
+<div class="dropdown-divider"></div>				   	   
+<a class="dropdown-item" href="../../product-categorization-services/index.html"><span>Product Categorization Services</span></a>	
+<div class="dropdown-divider"></div>				   
+</div>
+</li>	
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Industries</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="../../solutions/self-driving/index.html"><span>Self Driving</span></a>	
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../solutions/retail/index.html"><span>Retails</span></a>	
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../solutions/robotics/index.html"><span>Robotics</span></a>	
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../solutions/agriculture/index.html"><span>Agriculture</span></a>	
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../solutions/healthcare/index.html"><span>Healthcare</span></a>	
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../solutions/logistics/index.html"><span>Logistics</span></a>	
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../solutions/autonomous-flying/index.html"><span>Autonomous Flying</span></a>	
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../solutions/ai-security-camera/index.html"><span>AI Security Camera</span></a>	
+<div class="dropdown-divider"></div>
+</div>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="../index.html"><span>Blog</span></a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Company</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="../../about-us/index.html"><span>About Us</span></a>
+<div class="dropdown-divider"></div> 
+<a class="dropdown-item" href="../../social-impact/index.html"><span>Social Impact</span></a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="../../policies/index.html"><span>Policies</span></a>
+<div class="dropdown-divider"></div>	
+<a class="dropdown-item" href="../../contact-us/index.html"><span>Contact Us</span></a>
+<div class="dropdown-divider"></div>	
+<a class="dropdown-item" href="../../careers/index.html"><span>Careers</span></a>
+</div></li>
+<li class="nav-item contact" style="border:1px solid #ff6300;padding: 0px 8px;  margin-left: 15px;">
+<a class="nav-link" style="color:#ff6300;" href="../../request-a-quote/index.html" >Request a Quote</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</header>   <main>
+        
+		
+		<section class="hero">
+      <div class="container pt-5">
+      
+        <div class="hero-content pb-5 text-center pt-5">
+          <h1 class="mb-5 titleblog">Understanding Quality in Generative AI Training Datasets</h1>
+          <div class="row">   
+            <div class="col-xl-8 offset-xl-2"><p class="text-muted mb-0">
+			<img src="../../public/featured_images/anolytics.jpg" alt="Anolytics Logo" class="w-2rem rounded-circle me-2"> By <span class="text-muted fw-bold">Anolytics</span> <span class="mx-1">|</span> 13 February, 2025 in <a href="../category/generative-ai/index.html" class="fw-bold">Generative AI</a> <span class="mx-1">|</span> <span class="text-muted">4 mins read </span></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	
+	<section>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-10 mx-auto text-center"><img style="width: 80%;" class="img-fluid mb-5" src="../../public/upload/1739788034_generative-ai-training-datasets.png" alt="Understanding Quality in Generative AI Training Datasets"></div>
+        </div>
+        <div class="row">
+          <div class="col-xl-8 col-lg-10 mx-auto descp">           
+		  <p>Generative AI training, such as large language models (LLMs), requires extensive data to learn patterns, make predictions, and generate meaningful outputs. Traditionally, many businesses struggled to acquire quality datasets that were sufficiently large, diverse, and representative of real-world scenarios because of the high cost and low infrastructure. Without this data, AI models could not generalize well or perform effectively.</p><p>Earlier, only a few tech giants could afford quality training datasets to train AI algorithms. This is true, especially for developing deep learning models that exhaust resources, making it costly.</p><p>Today, let's explore how Anolytics can be your strategic partner for training data needed to train AI models. We will also learn about human annotation's quality and where to utilize AI-based training datasets.</p><h2>What is human annotation?</h2><p>Human-driven model training is a collaborative approach that integrates human oversight into the lifecycle of artificial intelligence systems. The human-in-the-loop (HITL) approach seeks to achieve what a machine or a human cannot accomplish alone. <br><br>In HITL, humans step in and solve problems that computers can't, fundamentally training them to become smarter and more predictive. As a consequence of this procedure, a constant feedback loop is maintained for training machine learning algorithms. Upon this, the system learns and consistently generates improved results with continuous feedback.</p><h2>Benefits of HITL</h2><p>● AI algorithms rely on the quality and quantity of labeled data, and humans possess vast knowledge to provide appropriate training for models.</p><p>● ML algorithms are trained through supervised learning with the help of annotated data sets, which is made possible by HITL.</p><p>● Humans must also maintain oversight, including defining objectives, validating data quality, and ensuring compliance with ethical standards.</p><p>● Humans guide AI models with their domain-specific knowledge so that the algorithm performs better when presented with new data.</p><p>● Building trust requires human-in-the-loop processes to comprehend the logic underlying AI predictions.</p><h3>Generative AI and Synthetic Data</h3><p>Generative AI-based training data is becoming popular as an alternate choice to human training data to meet the demand for massive datasets in a shorter duration. The usefulness of synthetic data is democratized for its opportunities in a range of businesses. Here's how:</p><p><b>Data Volume-</b> AI tools are known for quickly generating large amounts of datasets, as opposed to humans. For example, generative AI models like pre-trained foundational models generate much faster responses without any specific fine-tuning. Thus, organizations can leverage pre-trained generative AI models rather than starting from scratch.</p><p><b>Enhanced Utilization-</b> Machine learning works with smaller datasets by learning representations that utilize past data to predict outcomes. It creates new patterns from existing data to fill data scarcity issues in model training.</p><p><b>Minimize Human Dependency-</b> AI-assisted synthetic data comes in handy for meeting the needs for domain-specific models or scarce domains like developing multimodal image captioning, text-to-image synthesis, and speech-to-image generation. This entails teaching the AI system for different modalities that seamlessly integrate across various industries.</p><p>Since synthetic data generation with generative AI is a relatively new concept, talking to a data annotation provider is the best option to navigate this new, intricate landscape.</p><p style="text-align: left;">
+  <em>
+    <strong>Also Read:</strong>
+  </em>
+  <a href="../understanding-generative-ai-benefits-risks-and-key-applications/index.html" target="_blank" rel="noopener noreferrer">
+    <strong>Understanding Generative AI: Benefits, Risks and Key Applications</strong>
+  </a>
+</p><h4>Human annotation vs AI-annotation</h4><p>In this section, we compare the human-labeled training datasets essential for generative AI development because they ensure accuracy, contextual understanding, and reduced biases compared to AI-generated datasets. Here’s why they hold an advantage over AI-based training datasets:<br><br><b>1. Higher Accuracy and Reliability &nbsp;</b><br>Human annotators can precisely label data because they incorporate cultural understanding into real-world contexts that AI models might misinterpret. AI tools can do this based on human-annotated data first; they are quick and accurate, but they still need human supervision.<br><br><b>2. Rich, Descriptive, and Nuanced Annotations &nbsp;</b><br>AI-generated datasets often lack deep contextual understanding to decipher textual instructions. Humans can capture nuances from video-text correlations to nuances in visual aesthetics, such as sarcasm, intent, and domain-specific knowledge. <br><br><b>3. Bias Mitigation &nbsp;</b><br>AI models trained on AI-generated data may reinforce existing biases or introduce synthetic biases. Human involvement ensures diverse and representative data selection, helping reduce bias in generative AI models.<br><br><b>4. Emotional Annotation Enrichment</b><br>Humans can better label audio and visual recordings of individuals undergoing stress than AI tools. For facial recognition applications, rich insights into emotional content enable AI models to understand subtle expressions of distress across different sensory modalities.<br>&nbsp;<br><b>5. Verification and Continuous Improvement &nbsp;</b><br>Even AI-based labeling processes require human supervision to verify and correct errors. Human-labeled data ensures generative models produce trustworthy outputs in the healthcare, banking, and retail sectors.<br><br>The above scenarios suggest that we need to balance the demand for massive training data with quality annotation. This requires choosing the right annotation partner.</p><p style="text-align: left;">
+  <em>
+    <strong>Also Read:</strong>
+  </em>
+  <a href="../impact-of-artificial-intelligence-on-healthcare-operations-and-users/index.html" target="_blank" rel="noopener noreferrer">
+    <strong>Impact of Artificial Intelligence on Healthcare Operations and Users</strong>
+  </a>
+</p><h4>Choose Anolytics for Training Data</h4><p></p><p>Anolytics is a leading provider of high-quality training datasets, offering meticulously curated custom datasets across various industries. Let us understand our role in providing quality, quantity, and diversity of training datasets in model performance and effectiveness. &nbsp;<br><br><b>1. We offer quality training data</b>: If AI is trained on biased, noisy, or low-quality data, its outputs will be flawed. Human-annotated, accurate, and representative datasets ensure that the model development goes smoothly to generate reliable and contextually relevant content. &nbsp;<br><br><b>2. We meet the demand for quantity</b>: Our hybrid approach, i.e., using AI tools and human-in-the-loop, meets the demand for large-scale datasets. We stand for quality. Because low-quality data can dilute learning, whereas high-quality, proportional data helps improve model generalization. &nbsp;<br><br><b>3. We provide diverse training data</b>: If a dataset lacks diversity, it is incapable of performing domain-specific tasks, and your AI model may generate biased or narrow outputs. A well-diversified dataset helps AI produce fair, inclusive, and unbiased results across different applications.</p><h5>Conclusion</h5><p> Despite being faster, <a href="../../generative-ai/index.html" target="_blank">generative AI</a> training datasets are primarily for quantity and diversity. <a href="https://www.cogitotech.com/blog/what-is-human-in-the-loop-machine-learning-why-how-hitl-used-ai/" target="_blank">Human-in-the-loop</a> will forever hold importance in attaining quality training data. As AI continues to evolve, organizations must focus on curating, auditing, and improving datasets to maximize the potential of generative AI for their specific use cases.</p><p>To level up your AI project, choose Anolytics! We provide domain-specific training data in STEM, <a href="../../solutions/healthcare/index.html" target="_blank">medical</a>, banking, finance, gaming, insurance, retail, and e-commerce, among others. These specialized datasets ensure that AI and machine learning models enhance the accuracy and performance of the required project.</p><p>Anolytics helps businesses reduce bias, improve model precision, and accelerate AI development by offering domain-specific data. Whether you need datasets for medical AI, fraud detection in banking, recommendation systems in e-commerce, or gaming automation, Anolytics’s data annotation expertise ensures your AI models are trained with the most relevant and high-quality information.</p>         
+          </div>
+		  <style>
+		  .expert {
+color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 10px;
+  background: #a6ddff;
+  margin-top: 30px;
+}
+		  </style>
+		  
+		  <div class="col-xl-7 col-lg-10 mx-auto text-center pb-5">           
+				<div class="expert">If you wish to learn more about Anolytics’s data annotation services,<br>
+please contact our expert.<br />
+<a style="font-size: 1rem;" class="readmore" href="../../contact-us/index.html">Talk to an Expert &#8594;</a>
+</div>
+
+
+         
+          </div>
+        </div>
+		<hr class="bg-gray-500">
+
+      </div>
+    </section>
+	
+<section class="pb-5">
+      <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-lg-9 mt-5">		  
+            <h3 class="latestpost"><span>You might be interested</span></h3>
+          </div>
+   
+        </div>
+		 <div class="row justify-content-center">
+		 
+					
+<div class="col-lg-3 col-6 mb-0 pb-0">
+<div class="mb-0"><a href="../understanding-generative-ai-benefits-risks-and-key-applications/index.html"><img class="img-fluid blogimg" src="../../upload/1705384385_understanding-generative-ai.jpg" alt="..."></a>
+<div class="mt-3 borms">
+<ul class="list-unstyled pb-1">
+<li class="order-summary-item"><span class="byuser"><a href="../category/generative-ai/index.html" class="categorynm">Generative AI </a></span> </span><span class="byuser">16 Jan, 2024</span></li>
+</ul>
+
+<h5 class="my-2"><a class="blogtitles" href="../understanding-generative-ai-benefits-risks-and-key-applications/index.html">Understanding Generative AI: Benefits, Risks and Key Applications</a></h5>
+<p class="my-2 desc">Generative AI gleans from given artefacts to generate new, realistic artefacts that reveal the attributes of the trainin </p>
+<a class="readmore" href="../understanding-generative-ai-benefits-risks-and-key-applications/index.html">Read More &#8594;</a>
+</div>
+</div>
+
+</div>
+    <div class="col-lg-3 col-6 mb-0 pb-0">
+<div class="mb-0"><a href="../fine-tuning-and-its-transformative-impact-on-llms-output/index.html"><img class="img-fluid blogimg" src="../../upload/1724735896_fine-tuning-and-llm.jpg" alt="..."></a>
+<div class="mt-3 borms">
+<ul class="list-unstyled pb-1">
+<li class="order-summary-item"><span class="byuser"><a href="../category/generative-ai/index.html" class="categorynm">Generative AI </a></span> </span><span class="byuser">27 Aug, 2024</span></li>
+</ul>
+
+<h5 class="my-2"><a class="blogtitles" href="../fine-tuning-and-its-transformative-impact-on-llms-output/index.html">Fine-Tuning and Its Transformative Impact on LLMs&#039; Output</a></h5>
+<p class="my-2 desc">Large language models have transformed how we interact with machines with their capability to match human intelligence.  </p>
+<a class="readmore" href="../fine-tuning-and-its-transformative-impact-on-llms-output/index.html">Read More &#8594;</a>
+</div>
+</div>
+
+</div>
+    <div class="col-lg-3 col-6 mb-0 pb-0">
+<div class="mb-0"><a href="../the-impact-of-unrepresentative-data-on-ai-model-biases/index.html"><img class="img-fluid blogimg" src="../../upload/1729598380_the-impact-of-unrepresentative-data-on-ai-model-biases.jpg" alt="..."></a>
+<div class="mt-3 borms">
+<ul class="list-unstyled pb-1">
+<li class="order-summary-item"><span class="byuser"><a href="../category/generative-ai/index.html" class="categorynm">Generative AI </a></span> </span><span class="byuser">22 Oct, 2024</span></li>
+</ul>
+
+<h5 class="my-2"><a class="blogtitles" href="../the-impact-of-unrepresentative-data-on-ai-model-biases/index.html">The Impact of Unrepresentative Data on AI Model Biases</a></h5>
+<p class="my-2 desc">Unrepresentative data occurs when the training data fails to reflect the full scope of the input information and amplifi </p>
+<a class="readmore" href="../the-impact-of-unrepresentative-data-on-ai-model-biases/index.html">Read More &#8594;</a>
+</div>
+</div>
+
+</div>
+    		
+		</div>
+		
+	 </div>
+    </section>
+
+	  
+        </main>
+
+        <footer class="position-relative z-index-10 d-print-none site-footer">
+ 
+<div class="py-5" style="background: #f0f0f0;">
+            <div class="container">
+              <div class="row">
+                <div class="mb-5 mb-lg-0 col-lg-2 col-md-6 first">
+                  <div class="fw-bold text-uppercase text-dark mb-0">
+                    <div>
+                <img class="navbar-logo navbar-logo-light" src="../../upload/anolytics-logo-circle.png" alt="Anolytics Logo" width="85" height="83">
+                    </div>
+                  </div>
+                  <p style="color: #313131; margin-top: 1rem;font-size: 16px;line-height: 27px;margin-bottom: 2rem;">A low-cost data annotation service for machine learning and artificial intelligence companies seeking high-quality training data for diverse businesses</p>
+                  <ul class="list-inline">
+                 
+                 <li class="list-inline-item">
+                   <a href="https://twitter.com/anolytics" target="_blank" title="twitter" class="text-muted text-hover-primary">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="40px" height="40px"><path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path></svg>
+                   </a>
+                 </li>
+                 <li class="list-inline-item">
+                   <a href="https://www.linkedin.com/company/anolytics/" target="_blank" title="Linkedin" class="text-muted text-hover-primary">
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="#0a66c2" viewBox="0 0 24 24" height="33" width="33"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+               
+                   </a>
+                 </li>
+
+
+
+               
+               </ul>
+                </div>
+				 <div class="mb-5 mb-lg-0 col-lg-2 col-md-6 third">
+                  <div class="fheader mb-3">Industries</div>
+                  <ul class="list-unstyled">
+                    <li>
+                     <a class="footerlinks" href="../../solutions/ai-security-camera/index.html">AI Security Camera &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../solutions/agriculture/index.html">Agriculture &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../solutions/autonomous-flying/index.html">Autonomous Flying &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../solutions/healthcare/index.html">Healthcare &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../solutions/robotics/index.html">Robotics &#8674;</a>
+                    </li>
+					  <li>
+                      <a class="footerlinks" href="../../solutions/logistics/index.html">Logistics &#8674;</a>
+                    </li>
+					  <li>
+                      <a class="footerlinks" href="../../solutions/retail/index.html">Retail &#8674;</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mb-5 mb-lg-0 col-lg-2 col-md-6 second">
+                  <div class="fheader mb-3">Company</div>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="footerlinks" href="../../about-us/index.html">About Us &#8674;</a>
+                    </li>                  
+                    <li>
+                     <a class="footerlinks" href="../index.html">Blog &#8674;</a>
+                    </li>
+                    <li>
+                     <a class="footerlinks" href="../../social-impact/index.html">Social Impact &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../careers/index.html">Careers &#8674;</a>
+                    </li>
+					 <li>
+                      <a class="footerlinks" href="../../policies/index.html">Policies &#8674;</a>
+                    </li>
+					<li>
+                     <a style="color: #0a66c2;font-size: 13px !important;" class="footerlinks" href="https://calendly.com/cogito" target="_blank">Schedule a Call &#8674;</a>
+                    </li>
+                  </ul>
+                </div>
+               
+				     <div class="mb-5 mb-lg-0 col-lg-2 col-md-6 fourth">
+                  <div class="fheader mb-3">Services</div>
+                  <ul class="list-unstyled">
+                    <li>
+                     <a class="footerlinks" href="../../image-annotation-services/index.html">Image Annotation Services &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../video-annotation-services/index.html">Video Annotation Services &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../text-annotation-services/index.html">Text Annotation Services &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../content-moderation-services/index.html">Content Moderation Services &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../medical-data-annotation/index.html">Medical Data Annotation &#8674;</a>
+                    </li>
+					  <li>
+                      <a class="footerlinks" href="../../product-categorization-services/index.html">Product Categorization Service &#8674;</a>
+                    </li>
+					  <li>
+                      <a class="footerlinks" href="../../audio-annotation-services/index.html">Audio Annotation Services &#8674;</a>
+                    </li>
+		
+                  </ul>
+                </div>
+				     <div class="mb-5 mb-lg-0 col-lg-2 col-md-6 fifth">
+                  <div class="fheader mb-3">Annotation Tools</div>
+                  <ul class="list-unstyled">
+                    <li>
+                     <a class="footerlinks" href="../../bounding-box-annotation-services/index.html">Bounding Box Annotation &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../semantic-segmentation-services/index.html">Semantic Segmentation &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../landmark-annotation-services/index.html">Landmark Annotation &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../3d-point-cloud-annotation/index.html">3D Point Cloud Annotation &#8674;</a>
+                    </li>
+                    <li>
+                      <a class="footerlinks" href="../../3d-cuboid-annotation/index.html">3D Cuboid Annotation &#8674;</a>
+                    </li>
+					  <li>
+                      <a class="footerlinks" href="../../polyline-annotation-services/index.html">Polyline Annotation &#8674;</a>
+                    </li>
+					  <li>
+                      <a class="footerlinks" href="../../polygon-annotation-services/index.html">Polygon Annotation &#8674;</a>
+                    </li>
+                  </ul>
+                </div>
+             
+              </div>
+            </div>
+          </div>
+          <div class="py-4 " style="background: #000;">
+            <div class="container">
+              <div class="align-items-center row">
+                <div class="text-center text-md-start col-md-6">
+                  <p class="text-sm mb-md-0" style="color: #fff;">Copyright &copy; 2025 Anolytics.ai. All Rights Reserved. <a href="../../privacy-policy/index.html">Privacy Policy</a> </p>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </footer>
+   </div>
+    </div>
+	
+<script src="../../public/js/jquery.min.js"></script>
+<script src="../../public/js/bootstrap.js"></script>
+<script src="../../public/js/theme.js"></script>
+
+	
+	<style>
+.fixedPosition {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  box-shadow: 0 6px 10px 0 rgba(189,189,189,.35);
+}
+</style>
+<script>
+$(window).scroll(function () {
+    var y = $(window).scrollTop();
+    if (y > 0) {
+        $('#navigation').addClass('fixedPosition');
+    } else {
+        $('#navigation').removeClass('fixedPosition');
+
+    }
+});
+</script>
+<style>.paraaccord {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}</style>
+    </body>
+</html>
