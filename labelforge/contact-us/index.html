@@ -209,9 +209,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="col-lg-6" style="background: #fbfbfb;">
                             <div class="block mb-5">
                                 <div class="col-md-9 text-center text-md-start contactuspage">
-                                    <h4 class="ff-base">USA Office</h4>
+                                    <!--<h4 class="ff-base">USA Office</h4>
                                     <p class="mb-3 border-bottom-1">16 Horseshoe Ln, Levittown, New York 11756,<br/>
-                                        United States</p>
+                                        United States</p>-->
                                     <h4 class="ff-base">Vietnam Office</h4>
                                     <p class="mb-3 border-bottom-1">102 Tran Phu, Mo Lao, Ha Dong, Ha Noi,<br/>
                                         India</p>
@@ -226,86 +226,93 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
                         <div class="col-lg-6 p-5" style="background: #fbfbfb;">
                             <form name="ContactFrm" id="ContactFrm">
-    <input type="hidden" name="_token" value="rIvz7i5EfwpGBWrgO8xHF4kZatnNfQPUFetFpxIa">
-    <div class="controls">
-        <div class="row">
-            <div style="font-size: 12px;" class="col-sm-12 text-right mb-2">
+                                <input type="hidden" name="_token" value="rIvz7i5EfwpGBWrgO8xHF4kZatnNfQPUFetFpxIa">
+                                <div class="controls">
+                                    <div class="row">
+                                        <div style="font-size: 12px;" class="col-sm-12 text-right mb-2">
                 <span style="border: 1px solid #c1c1c1;background: #d9d8d8;border-radius: inherit20px;padding: 4px 10px;">
                     (*) all the fields need to be filled.
                 </span>
-            </div>
-            <div class="col-sm-6">
-                <div class="mb-4">
-                    <label class="form-label" for="name">First Name *</label>
-                    <input class="form-control" type="text" name="name" id="name" placeholder="e.g. John" required>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="mb-4">
-                    <label class="form-label" for="surname">Last Name *</label>
-                    <input class="form-control" type="text" name="surname" id="surname" placeholder="e.g. Eric" required>
-                </div>
-            </div>
-        </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="mb-4">
+                                                <label class="form-label" for="name">First Name *</label>
+                                                <input class="form-control" type="text" name="name" id="name"
+                                                       placeholder="e.g. John" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="mb-4">
+                                                <label class="form-label" for="surname">Last Name *</label>
+                                                <input class="form-control" type="text" name="surname" id="surname"
+                                                       placeholder="e.g. Eric" required>
+                                            </div>
+                                        </div>
+                                    </div>
 
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="mb-4">
-                    <label class="form-label" for="email">E-mail Address *</label>
-                    <input class="form-control" type="email" name="email" id="email" placeholder="e.g. johneric@gmail.com" required>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="mb-4">
-                    <label class="form-label" for="phoneno">Phone No.</label>
-                    <input class="form-control" type="text" name="phoneno" id="phoneno" placeholder="e.g. +1 9100 000 000">
-                </div>
-            </div>
-        </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="mb-4">
+                                                <label class="form-label" for="email">E-mail Address *</label>
+                                                <input class="form-control" type="email" name="email" id="email"
+                                                       placeholder="e.g. johneric@gmail.com" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="mb-4">
+                                                <label class="form-label" for="phoneno">Phone No.</label>
+                                                <input class="form-control" type="text" name="phoneno" id="phoneno"
+                                                       placeholder="e.g. +1 9100 000 000">
+                                            </div>
+                                        </div>
+                                    </div>
 
-        <div class="mb-4">
-            <label class="form-label" for="message">Message *</label>
-            <textarea class="form-control" rows="4" name="message" id="message" placeholder="e.g. I am looking for annotation work." required></textarea>
-        </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="message">Message *</label>
+                                        <textarea class="form-control" rows="4" name="message" id="message"
+                                                  placeholder="e.g. I am looking for annotation work."
+                                                  required></textarea>
+                                    </div>
 
-        <input type="hidden" name="page_url" value="https://www.labelforge.tech/contact-us/">
-        <input type="hidden" name="industry" value="N/A">
+                                    <input type="hidden" name="page_url"
+                                           value="https://www.labelforge.tech/contact-us/">
+                                    <input type="hidden" name="industry" value="N/A">
 
-        <button class="btn btn-outline-dark" type="submit">Send message</button>
-    </div>
-</form>
+                                    <button class="btn btn-outline-dark" type="submit">Send message</button>
+                                </div>
+                            </form>
 
-<script>
-document.getElementById("ContactFrm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Stop default form submission
+                            <script>
+                                document.getElementById("ContactFrm").addEventListener("submit", function(event) {
+                                    event.preventDefault(); // Stop default form submission
 
-    // Collect form data
-    let formData = {
-        first_name: document.getElementById("name").value,
-        last_name: document.getElementById("surname").value,
-        email: document.getElementById("email").value,
-        phone_no: document.getElementById("phoneno").value,
-        message: document.getElementById("message").value
-    };
+                                    // Collect form data
+                                    let formData = {
+                                        first_name: document.getElementById("name").value,
+                                        last_name: document.getElementById("surname").value,
+                                        email: document.getElementById("email").value,
+                                        phone_no: document.getElementById("phoneno").value,
+                                        message: document.getElementById("message").value
+                                    };
 
-    // Send data to Google Apps Script Web App
-    fetch("https://script.google.com/macros/s/AKfycbzcL3mzck6za72jbDNffRJXstbrDJCKb-RPJHUORRQE1Xzdwbt5SllO7wOOl70-5B0/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        mode: "no-cors",  // ✅ This enables cross-origin requests
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert("Message sent successfully!");
-        document.getElementById("ContactFrm").reset(); // Clear the form
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("Failed to send message. Please try again.");
-    });
-});
-</script>
+                                    // Send data to Google Apps Script Web App
+                                    fetch("https://script.google.com/macros/s/AKfycbxRu6QnrThxBTkG3deAS290rc3zo9zaL_UIj7LH2KV7HXvWDTCYi7pSzVXEdPfs06I/exec", {
+                                        method: "POST",
+                                        headers: { "Content-Type": "application/json" },
+                                        mode: "no-cors",  // ✅ This enables cross-origin requests
+                                        body: JSON.stringify(formData)
+                                    })
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        document.getElementById("ContactFrm").reset(); // Clear the form
+                                        window.location.href = "../thank-you/thank-you.html";
+                                    })
+                                    .catch(error => {
+                                        console.error("Error:", error);
+                                        window.location.href = "../thank-you/thank-you.html";
+                                    });
+                                });
+                            </script>
 
                         </div>
                     </div>

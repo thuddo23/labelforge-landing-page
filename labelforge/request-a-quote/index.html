@@ -156,57 +156,106 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="row ">
 <div style="background: #fff;border-radius: 10px;box-shadow: 0 .275rem .75rem -.0625rem rgba(10, 15, 25, 0.41),0 .125rem .4rem -.0625rem rgba(10, 15, 25, 0.34) !important;" class="col-xl-5 mx-auto text-left mt-1 mb-4 mt-3 py-5 px-5">
 
-        <form name="requestquoteFrm" id="requestquoteFrm" action="https://www.labelforge.tech/requestquotemail" method="POST">
-<input type="hidden" name="_token" value="rIvz7i5EfwpGBWrgO8xHF4kZatnNfQPUFetFpxIa">              <div class="controls">
-                <div class="row">
-		<div style="font-size: 12px;" class="col-sm-12 text-right mb-2">(*) all the fields need to be filled.</div>
-                  <div class="col-sm-6">
-                    <div class="mb-4">                  
-                      <input class="form-control" type="text" name="name" id="name" placeholder="First name*" required="required">
-                    </div>
-                  </div>  
- <div class="col-sm-6">
-                    <div class="mb-4">                  
-                      <input class="form-control" type="text" name="surname" id="surname" placeholder="Last name*" required="required">
-                    </div>
-                  </div> 				  
+        <form name="requestquoteFrm" id="requestquoteFrm">
+    <input type="hidden" name="_token" value="rIvz7i5EfwpGBWrgO8xHF4kZatnNfQPUFetFpxIa">
+    <div class="controls">
+        <div class="row">
+            <div style="font-size: 12px;" class="col-sm-12 text-right mb-2">(*) all the fields need to be filled.</div>
+
+            <div class="col-sm-6">
+                <div class="mb-4">
+                    <input class="form-control" type="text" name="name" id="name" placeholder="First name*" required>
                 </div>
-				
-                  <div class="col-sm-12">
-                    <div class="mb-4">                  
-                  <input class="form-control" type="email" name="email" id="email" placeholder="E-mail*" required="required">
-              				</div>
-                  </div>
-                  <div class="col-sm-12">
-                    <div class="mb-4">               
-                      <input class="form-control" type="text" name="phoneno" id="phoneno" placeholder="Phone no.">
-                    </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <div class="mb-4">               
-                    <select class="form-control" id="industry" aria-required="true" aria-invalid="false" name="industry">
-                      <option value="">—Please choose an option—</option>
-                      <option value="Self Driving">Self Driving</option>
-                      <option value="Retail">Retail</option>
-                      <option value="Robotics">Robotics</option>
-                      <option value="Agriculture">Agriculture</option>
-                      <option value="Healthcare">Healthcare</option>
-                      <option value="Autonomous Flying">Autonomous Flying</option>
-                      <option value="AI Security Camera">AI Security Camera</option>
-                      <option value="Satellite Imagery">Satellite Imagery</option>
-                      <option value="Others">Others</option>
-                  </select>
-                    </div>
-                  </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="mb-4">
+                    <input class="form-control" type="text" name="surname" id="surname" placeholder="Last name*" required>
                 </div>
-            
-                <div class="mb-4">              
-                  <textarea class="form-control" rows="4" name="message" id="message" placeholder="Type message here" required="required"></textarea>
-                </div>
-				<input type="hidden" name="page_url" value="https://www.labelforge.tech/request-a-quote/">
-                <button class="btn btn-outline-dark" type="submit" style="margin: 0 auto;display: inherit;">Send message</button>
-              </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="mb-4">
+                <input class="form-control" type="email" name="email" id="email" placeholder="E-mail*" required>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="mb-4">
+                <input class="form-control" type="text" name="phoneno" id="phoneno" placeholder="Phone no.">
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="mb-4">
+                <select class="form-control" id="industry" name="industry" required>
+                    <option value="">—Please choose an option—</option>
+                    <option value="Self Driving">Self Driving</option>
+                    <option value="Retail">Retail</option>
+                    <option value="Robotics">Robotics</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Autonomous Flying">Autonomous Flying</option>
+                    <option value="AI Security Camera">AI Security Camera</option>
+                    <option value="Satellite Imagery">Satellite Imagery</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <textarea class="form-control" rows="4" name="message" id="message" placeholder="Type message here" required></textarea>
+        </div>
+
+        <input type="hidden" name="page_url" value="https://www.labelforge.tech/request-a-quote/">
+
+        <div class="col-sm-12 text-center">
+            <button class="btn btn-outline-dark" id="submitBtn" type="submit">Send message</button>
+        </div>
+    </div>
 </form>
+
+<script>
+document.getElementById("requestquoteFrm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Stop default form submission
+
+    let submitBtn = document.getElementById("submitBtn");
+    submitBtn.disabled = true; // Disable button to prevent multiple clicks
+    let originalText = submitBtn.innerText; // Save original button text
+    submitBtn.innerText = "Submitting..."; // Show submitting text
+
+    // Collect form data
+    let formData = {
+        first_name: document.getElementById("name").value,
+        last_name: document.getElementById("surname").value,
+        email: document.getElementById("email").value,
+        phone_no: document.getElementById("phoneno").value,
+        message: document.getElementById("message").value,
+        industry: document.getElementById("industry").value,
+    };
+
+    // Send data to Google Apps Script Web App
+    fetch("https://script.google.com/macros/s/AKfycbxRu6QnrThxBTkG3deAS290rc3zo9zaL_UIj7LH2KV7HXvWDTCYi7pSzVXEdPfs06I/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",  // ✅ This enables cross-origin requests,
+        body: JSON.stringify(formData)
+    })
+    .then(() => {
+        document.getElementById("requestquoteFrm").reset(); // Clear the form
+        window.location.href = "../thank-you/thank-you.html"; // Redirect to Thank You page
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        window.location.href = "../thank-you/thank-you.html"; // Redirect even on error
+    })
+    .finally(() => {
+        submitBtn.innerText = originalText; // Reset button text
+        submitBtn.disabled = false; // Enable button
+    });
+});
+</script>
+
 
 </div>
 

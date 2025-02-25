@@ -314,46 +314,89 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-        <form class="mb-5" name="ContactFrm" id="contact-form" action="https://www.labelforge.tech/contactmail" method="POST">
-<input type="hidden" name="_token" value="rIvz7i5EfwpGBWrgO8xHF4kZatnNfQPUFetFpxIa">         
-              <div class="row">
-			  <div style="font-size: 12px;" class="col-sm-12 text-right mb-2"><span style="padding: 4px 10px; color: #fff;">(*) all the fields need to be filled.</span></div>
-                <div class="col-sm-6">
-                  <div class="mb-4">
-                    
-                    <input class="form-control" type="text" name="name" id="name" placeholder="First Name*" required="required">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="mb-4">
-                 
-                    <input class="form-control" type="text" name="surname" id="surname" placeholder="Last Name*" required="required">
-                  </div>
-                </div>
-              </div>
-			    <div class="row">
-                <div class="col-sm-6">
-                  <div class="mb-4">
-                   
-                    <input class="form-control" type="email" name="email" id="email" placeholder="Email Address*" required="required">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="mb-4">
-             
-                    <input class="form-control" type="text" name="phoneno" id="phoneno" placeholder="Phone no." required="required">
-                  </div>
-                </div>
-              </div>
-              <div class="mb-4">        
-              <textarea class="form-control" rows="4" name="message" id="message" placeholder="Enter your message" required="required"></textarea>
-              </div>
-          <input type="hidden" name="page_url" value="https://www.labelforge.tech/solutions/robotics/">
-			  <input type="hidden" name="industry" value="N/A">
-                <div class="col-sm-12 text-center">
-			  <input class="btn sendmessage" type="submit" value="Send message">
-			  </div>
-            </form>
+        <form class="mb-5" name="ContactFrm" id="contact-form">
+    <input type="hidden" name="_token" value="rIvz7i5EfwpGBWrgO8xHF4kZatnNfQPUFetFpxIa">
+
+    <div class="row">
+        <div style="font-size: 12px;" class="col-sm-12 text-right mb-2">
+            <span style="padding: 4px 10px; color: #fff;">(*) all the fields need to be filled.</span>
+        </div>
+        <div class="col-sm-6">
+            <div class="mb-4">
+                <input class="form-control" type="text" name="name" id="name" placeholder="First Name*" required="required">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="mb-4">
+                <input class="form-control" type="text" name="surname" id="surname" placeholder="Last Name*" required="required">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="mb-4">
+                <input class="form-control" type="email" name="email" id="email" placeholder="Email Address*" required="required">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="mb-4">
+                <input class="form-control" type="text" name="phoneno" id="phoneno" placeholder="Phone no.">
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <textarea class="form-control" rows="4" name="message" id="message" placeholder="Enter your message" required="required"></textarea>
+    </div>
+
+    <input type="hidden" name="page_url" value="https://www.labelforge.tech">
+    <input type="hidden" name="industry" value="N/A">
+
+    <div class="col-sm-12 text-center">
+        <input class="btn sendmessage" id="submitBtn" type="submit" value="Send message">
+    </div>
+</form>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Stop default form submission
+
+    let submitBtn = document.getElementById("submitBtn"); // Get submit button
+    submitBtn.disabled = true; // Disable button
+    let originalText = submitBtn.value; // Save original button text
+    submitBtn.value = "Submitting..."; // Change button text
+
+    // Collect form data
+    let formData = {
+        first_name: document.getElementById("name").value,
+        last_name: document.getElementById("surname").value,
+        email: document.getElementById("email").value,
+        phone_no: document.getElementById("phoneno").value,
+        message: document.getElementById("message").value
+    };
+
+    // Send data to Google Apps Script Web App
+    fetch("https://script.google.com/macros/s/AKfycbxRu6QnrThxBTkG3deAS290rc3zo9zaL_UIj7LH2KV7HXvWDTCYi7pSzVXEdPfs06I/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",  // ✅ This enables cross-origin requests
+        body: JSON.stringify(formData)
+    })
+    .then(() => {
+        document.getElementById("contact-form").reset(); // Clear the form
+        window.location.href = "../../thank-you/thank-you.html"; // Redirect to Thank You page
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        window.location.href = "../../thank-you/thank-you.html"; // Redirect even on error
+    })
+    .finally(() => {
+        submitBtn.value = originalText; // Reset button text
+        submitBtn.disabled = false; // Enable button
+    });
+});
+</script>
           
           </div>
         </div>
